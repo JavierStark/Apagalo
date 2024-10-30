@@ -1,0 +1,207 @@
+[gd_scene load_steps=14 format=3 uid="uid://bkmmeagghl721"]
+
+[ext_resource type="FontFile" uid="uid://mmop8lqj3gns" path="res://King Kids.otf" id="1_yc46p"]
+[ext_resource type="Texture2D" uid="uid://bdjq8jifwdwfg" path="res://Sprites/Electrodomésticos/BotónTostadora.png" id="2_iykct"]
+[ext_resource type="Texture2D" uid="uid://bn8dodhupojbg" path="res://Sprites/Electrodomésticos/BotónTostadoraOff.png" id="3_3w4nl"]
+[ext_resource type="Texture2D" uid="uid://bhf51bxgaaq72" path="res://Sprites/Light/Cocina.png" id="4_uku5d"]
+[ext_resource type="Texture2D" uid="uid://bybhk1fb6lhe0" path="res://Sprites/Light/CocinaOff.png" id="5_vf3so"]
+[ext_resource type="Script" path="res://Scenes/ChangeScene.cs" id="6_468wt"]
+[ext_resource type="Texture2D" uid="uid://uvo54hv1ecjh" path="res://Sprites/boton_play.png" id="6_ayhl2"]
+[ext_resource type="AudioStream" uid="uid://6nn3hughump4" path="res://FX/Cancion_menu.mp3" id="8_3hu3s"]
+
+[sub_resource type="Gradient" id="Gradient_vfoep"]
+offsets = PackedFloat32Array(0.0202899)
+colors = PackedColorArray(0.484375, 0.609375, 0.808594, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6iw65"]
+gradient = SubResource("Gradient_vfoep")
+
+[sub_resource type="LabelSettings" id="LabelSettings_aya0s"]
+font = ExtResource("1_yc46p")
+font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_hb4po"]
+font = ExtResource("1_yc46p")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_7fl2f"]
+font = ExtResource("1_yc46p")
+font_size = 40
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(619, 357)
+scale = Vector2(6.63672, 958)
+texture = SubResource("GradientTexture1D_6iw65")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 134.0
+grow_horizontal = 2
+text = "Tutorial
+"
+label_settings = SubResource("LabelSettings_aya0s")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -582.0
+offset_top = -196.5
+offset_right = 582.0
+offset_bottom = 196.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Si hay personas en una habitación 
+-> Enciende la luz!
+
+Si no hay nadie o hay fantasmas 
+-> Apágala y no gastes electricidad!
+
+Recuerda, apaga siempre los electrodomésticos o se cabrearán"
+label_settings = SubResource("LabelSettings_hb4po")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -317.5
+offset_top = -157.83
+offset_right = -82.5
+offset_bottom = -24.83
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_iykct")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 562.0
+offset_bottom = 696.0
+grow_horizontal = 2
+text = "--->
+"
+label_settings = SubResource("LabelSettings_aya0s")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 82.5
+offset_top = -157.83
+offset_right = 317.5
+offset_bottom = -24.83
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_3w4nl")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 14.35
+offset_top = -556.0
+offset_right = 498.351
+offset_bottom = -448.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_uku5d")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 14.35
+offset_top = -409.0
+offset_right = 498.351
+offset_bottom = -301.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("5_vf3so")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_right = 270.0
+offset_bottom = 108.0
+flat = true
+script = ExtResource("6_468wt")
+sceneToChange = "res://Scenes/Main.tscn"
+
+[node name="Label" type="Label" parent="Button2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -26.5
+offset_right = 81.5
+offset_bottom = 26.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "<- Menu"
+label_settings = SubResource("LabelSettings_7fl2f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 472.0
+offset_top = -100.0
+offset_right = 621.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+icon = ExtResource("6_ayhl2")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("6_468wt")
+sceneToChange = "res://Scenes/Countdown.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_3hu3s")
+autoplay = true

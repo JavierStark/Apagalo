@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dju38c3gxbjow"
+path="res://.godot/imported/11.Aplausos puntuacion final.mp3-bc4dad8b56e4ff9af6d4bef33bb42cb1.mp3str"
+
+[deps]
+
+source_file="res://FX/11.Aplausos puntuacion final.mp3"
+dest_files=["res://.godot/imported/11.Aplausos puntuacion final.mp3-bc4dad8b56e4ff9af6d4bef33bb42cb1.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

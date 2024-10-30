@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsudx6vt4skhh"
+path="res://.godot/imported/8.1.Tostadora principio.mp3-611f3f2ca97e668f6a12889934811d15.mp3str"
+
+[deps]
+
+source_file="res://FX/8.1.Tostadora principio.mp3"
+dest_files=["res://.godot/imported/8.1.Tostadora principio.mp3-611f3f2ca97e668f6a12889934811d15.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

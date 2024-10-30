@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6t0io4rgx23g"]
+
+[ext_resource type="Texture2D" uid="uid://dhhahbgfsj8jq" path="res://Sprites/pantalla_titulo.jpg" id="1_va740"]
+[ext_resource type="Texture2D" uid="uid://uvo54hv1ecjh" path="res://Sprites/boton_play.png" id="2_61052"]
+[ext_resource type="Script" path="res://Scenes/ChangeScene.cs" id="3_je5ix"]
+[ext_resource type="FontFile" uid="uid://mmop8lqj3gns" path="res://King Kids.otf" id="5_aopq5"]
+[ext_resource type="AudioStream" uid="uid://6nn3hughump4" path="res://FX/Cancion_menu.mp3" id="5_vdykn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j4sgv"]
+font = ExtResource("5_aopq5")
+font_size = 40
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_va740")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -177.5
+offset_top = -295.0
+offset_right = 177.5
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 0
+icon = ExtResource("2_61052")
+flat = true
+script = ExtResource("3_je5ix")
+sceneToChange = "res://Scenes/Countdown.tscn"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 984.0
+offset_top = 543.0
+offset_right = 1254.0
+offset_bottom = 651.0
+flat = true
+script = ExtResource("3_je5ix")
+sceneToChange = "res://Scenes/Tutorial.tscn"
+
+[node name="Label" type="Label" parent="Button2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -26.5
+offset_right = 81.5
+offset_bottom = 26.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Tutorial ->"
+label_settings = SubResource("LabelSettings_j4sgv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_vdykn")
+autoplay = true

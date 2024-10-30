@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqaws25swt02c"]
+
+[ext_resource type="FontFile" uid="uid://mmop8lqj3gns" path="res://King Kids.otf" id="1_6211c"]
+[ext_resource type="Script" path="res://Scenes/Countdown.cs" id="2_7ce40"]
+
+[sub_resource type="Gradient" id="Gradient_c5f4u"]
+offsets = PackedFloat32Array(0.0202899)
+colors = PackedColorArray(1, 0.788235, 0.670588, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rl0yr"]
+gradient = SubResource("Gradient_c5f4u")
+
+[sub_resource type="LabelSettings" id="LabelSettings_dw5gn"]
+font = ExtResource("1_6211c")
+font_size = 200
+font_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(619, 357)
+scale = Vector2(6.63672, 958)
+texture = SubResource("GradientTexture1D_rl0yr")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "3"
+label_settings = SubResource("LabelSettings_dw5gn")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_7ce40")
+
+[node name="Timer" type="Timer" parent="Label"]
+autostart = true

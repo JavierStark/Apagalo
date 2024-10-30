@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://coccnenwb5y26"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dvuim"]
+bg_color = Color(0.132813, 0.132813, 0.132813, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.132813, 0.132813, 0.132813, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+
+[resource]
+TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_dvuim")

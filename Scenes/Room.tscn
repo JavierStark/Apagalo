@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://nq05ii54be51"]
+
+[ext_resource type="Script" path="res://Scenes/Room.cs" id="1_0aqet"]
+[ext_resource type="Texture2D" uid="uid://2nvctod5yimi" path="res://Sprites/light.png" id="2_ihn25"]
+[ext_resource type="PackedScene" uid="uid://6t0hegum07ea" path="res://Scenes/Device.tscn" id="3_rpgow"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p8jq4"]
+closed = false
+polygon = PackedVector2Array(-48, 46.5, -48, 62.5)
+
+[node name="Room" type="Control" groups=["Room"]]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 163.0
+offset_bottom = 184.0
+script = ExtResource("1_0aqet")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(176, 75.5)
+occluder = SubResource("OccluderPolygon2D_p8jq4")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2(176, 75.5)
+occluder = SubResource("OccluderPolygon2D_p8jq4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(77, 85)
+enabled = false
+energy = 5.0
+shadow_enabled = true
+texture = ExtResource("2_ihn25")
+
+[node name="Device" parent="." instance=ExtResource("3_rpgow")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_top = -58.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(31, 29)
+
+[node name="TextureRect" parent="Device" index="2"]
+pivot_offset = Vector2(31, 29)
+
+[editable path="Device"]

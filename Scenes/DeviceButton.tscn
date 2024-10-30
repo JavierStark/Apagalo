@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgbw7urt2swfy"]
+
+[ext_resource type="Texture2D" uid="uid://bcg50x84y0k08" path="res://Sprites/Electrodomésticos/BotónAltavoz.png" id="1_1gddb"]
+[ext_resource type="Texture2D" uid="uid://b06kow3vq2irl" path="res://Sprites/Electrodomésticos/BotónAltavozOff.png" id="2_l5egr"]
+[ext_resource type="Script" path="res://Scenes/DeviceButton.cs" id="3_kik5c"]
+[ext_resource type="AudioStream" uid="uid://dfp3gwuniv3ae" path="res://FX/PulsarBotón.mp3" id="3_nmasp"]
+
+[node name="DeviceButton" type="TextureButton"]
+anchors_preset = -1
+anchor_right = 0.4875
+anchor_bottom = 0.363889
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+texture_normal = ExtResource("1_1gddb")
+texture_pressed = ExtResource("2_l5egr")
+texture_disabled = ExtResource("2_l5egr")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("3_kik5c")
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_nmasp")

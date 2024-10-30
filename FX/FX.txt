@@ -1,0 +1,18 @@
+1.Lampara encendido
+2.Lavadora
+3.Secador
+4.Cortacesped
+5.TV (ruido blanco)
+6.Equipo de música (radio)
+7.Vitro
+8.1.Tostadora principio
+8.2.Tostadora final
+9.Exprimidor
+10.Fantasma que aparece
+11.Aplausos: puntuacion final
+12.Pasos
+13.Boton encendido/apagado app
+14.Subir escalera
+15.Bajar escalera
+16.Abrir puerta
+17.Cerrar puerta

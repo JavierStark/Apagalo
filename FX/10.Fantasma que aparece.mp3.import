@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgl4pmj7gcmph"
+path="res://.godot/imported/10.Fantasma que aparece.mp3-62a26bac061bf6579b27b2001831eb32.mp3str"
+
+[deps]
+
+source_file="res://FX/10.Fantasma que aparece.mp3"
+dest_files=["res://.godot/imported/10.Fantasma que aparece.mp3-62a26bac061bf6579b27b2001831eb32.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

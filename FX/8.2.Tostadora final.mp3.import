@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://j7tup4oya517"
+path="res://.godot/imported/8.2.Tostadora final.mp3-96095f5e102aaa5de03054062d4ceb34.mp3str"
+
+[deps]
+
+source_file="res://FX/8.2.Tostadora final.mp3"
+dest_files=["res://.godot/imported/8.2.Tostadora final.mp3-96095f5e102aaa5de03054062d4ceb34.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

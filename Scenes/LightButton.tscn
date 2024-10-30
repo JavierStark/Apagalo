@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwon1t8hgjahe"]
+
+[ext_resource type="Texture2D" uid="uid://dsbf0l1f75yb3" path="res://Sprites/Light/BañoOff.png" id="1_5n6if"]
+[ext_resource type="Texture2D" uid="uid://c7bf4s1sjsgs3" path="res://Sprites/Light/Baño.png" id="2_aij47"]
+[ext_resource type="Script" path="res://Scenes/LightButton.cs" id="3_kmk2x"]
+[ext_resource type="AudioStream" uid="uid://dfp3gwuniv3ae" path="res://FX/PulsarBotón.mp3" id="4_lgdwk"]
+
+[node name="TextureButton" type="TextureButton"]
+anchors_preset = -1
+anchor_right = 0.385938
+anchor_bottom = 0.198611
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+texture_normal = ExtResource("1_5n6if")
+texture_pressed = ExtResource("2_aij47")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("3_kmk2x")
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_lgdwk")
+pitch_scale = 2.0

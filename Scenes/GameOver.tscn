@@ -1,0 +1,181 @@
+[gd_scene load_steps=12 format=3 uid="uid://b2tkjae7f7teo"]
+
+[ext_resource type="Script" path="res://Scenes/GameOver.cs" id="1_ut6gv"]
+[ext_resource type="FontFile" uid="uid://mmop8lqj3gns" path="res://King Kids.otf" id="2_lewvt"]
+[ext_resource type="Script" path="res://Scenes/ChangeScene.cs" id="3_5e7mg"]
+[ext_resource type="Texture2D" uid="uid://uvo54hv1ecjh" path="res://Sprites/boton_play.png" id="3_ja42b"]
+[ext_resource type="AudioStream" uid="uid://6nn3hughump4" path="res://FX/Cancion_menu.mp3" id="5_3ba6c"]
+
+[sub_resource type="Gradient" id="Gradient_nxmsh"]
+offsets = PackedFloat32Array(0.0202899)
+colors = PackedColorArray(0.484375, 0.609375, 0.808594, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_70eih"]
+gradient = SubResource("Gradient_nxmsh")
+
+[sub_resource type="LabelSettings" id="LabelSettings_7cpij"]
+font = ExtResource("2_lewvt")
+font_size = 80
+font_color = Color(1, 0.788235, 0.670588, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_x2d2a"]
+font = ExtResource("2_lewvt")
+font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_p86gt"]
+font = ExtResource("2_lewvt")
+font_size = 100
+font_color = Color(1, 1, 0.117647, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fuvdo"]
+font = ExtResource("2_lewvt")
+font_size = 40
+
+[node name="Control" type="Control" node_paths=PackedStringArray("sostenibilityLabel", "satisfactionLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ut6gv")
+sostenibilityLabel = NodePath("Label2/Label")
+satisfactionLabel = NodePath("Label3/Label")
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(489.5, 222.5)
+scale = Vector2(10.5352, 1401)
+texture = SubResource("GradientTexture1D_70eih")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -216.5
+offset_right = 216.5
+offset_bottom = 248.0
+grow_horizontal = 2
+text = "GAME Over"
+label_settings = SubResource("LabelSettings_7cpij")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.5
+offset_top = -174.0
+offset_right = 216.5
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sostenibilidad"
+label_settings = SubResource("LabelSettings_x2d2a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Label2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -105.0
+offset_top = -94.0
+offset_right = 105.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "*****"
+label_settings = SubResource("LabelSettings_p86gt")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.5
+offset_top = 72.0
+offset_right = 216.5
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Satisfacción"
+label_settings = SubResource("LabelSettings_x2d2a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Label3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -111.5
+offset_top = -90.0
+offset_right = 98.5
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "*****"
+label_settings = SubResource("LabelSettings_p86gt")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_right = 270.0
+offset_bottom = 108.0
+flat = true
+script = ExtResource("3_5e7mg")
+sceneToChange = "res://Scenes/Main.tscn"
+
+[node name="Label" type="Label" parent="Button2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -26.5
+offset_right = 81.5
+offset_bottom = 26.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "<- Menu"
+label_settings = SubResource("LabelSettings_fuvdo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 472.0
+offset_top = -100.0
+offset_right = 621.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+icon = ExtResource("3_ja42b")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_5e7mg")
+sceneToChange = "res://Scenes/Map.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_3ba6c")
+autoplay = true

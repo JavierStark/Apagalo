@@ -1,0 +1,1043 @@
+[gd_scene load_steps=87 format=3 uid="uid://d3okceejvocb"]
+
+[ext_resource type="Script" path="res://Scenes/Map.cs" id="1_frufw"]
+[ext_resource type="PackedScene" uid="uid://nq05ii54be51" path="res://Scenes/Room.tscn" id="2_7ls4f"]
+[ext_resource type="PackedScene" uid="uid://bwon1t8hgjahe" path="res://Scenes/LightButton.tscn" id="2_dig6q"]
+[ext_resource type="Texture2D" uid="uid://5ag8jv3bufhg" path="res://Sprites/Light/EntradaOff.png" id="3_og7ol"]
+[ext_resource type="PackedScene" uid="uid://bxyhaa8jyrj5c" path="res://Scenes/NPC.tscn" id="3_v70e1"]
+[ext_resource type="Texture2D" uid="uid://dgkwxt7ovoq3w" path="res://Sprites/Light/Entrada.png" id="4_704h3"]
+[ext_resource type="Texture2D" uid="uid://f7o7eta51jhv" path="res://Sprites/Floor1.png" id="4_kjb7m"]
+[ext_resource type="Texture2D" uid="uid://b2rjxgcex2cbg" path="res://Sprites/Light/ComedorOff.png" id="5_h0sac"]
+[ext_resource type="Texture2D" uid="uid://bxrge0qow3wsd" path="res://Sprites/Light/Comedor.png" id="6_5rodd"]
+[ext_resource type="Script" path="res://Scenes/DayNightCycle.cs" id="6_862vi"]
+[ext_resource type="Texture2D" uid="uid://bybhk1fb6lhe0" path="res://Sprites/Light/CocinaOff.png" id="7_mr6vj"]
+[ext_resource type="Texture2D" uid="uid://cekrivvat5xvn" path="res://Sprites/Light/LavaderoOff.png" id="8_6alo8"]
+[ext_resource type="Texture2D" uid="uid://bhf51bxgaaq72" path="res://Sprites/Light/Cocina.png" id="8_p8xu0"]
+[ext_resource type="Texture2D" uid="uid://5i4bkxi5ftj1" path="res://Sprites/Light/Lavadero.png" id="9_yvsc4"]
+[ext_resource type="Texture2D" uid="uid://h0uxc3jcwu20" path="res://Sprites/Light/JardínOff.png" id="10_fx7sa"]
+[ext_resource type="Texture2D" uid="uid://cxfhqmyyjakoy" path="res://Sprites/Light/Jardín.png" id="11_ynvu1"]
+[ext_resource type="PackedScene" uid="uid://cgbw7urt2swfy" path="res://Scenes/DeviceButton.tscn" id="13_4scxe"]
+[ext_resource type="Texture2D" uid="uid://c7o78johsrlsd" path="res://Sprites/Electrodomésticos/LuzEntrada.png" id="14_wmdhy"]
+[ext_resource type="Texture2D" uid="uid://d0mtlegx6t3yh" path="res://Sprites/Electrodomésticos/LuzEntradaOff.png" id="15_jj3sw"]
+[ext_resource type="Texture2D" uid="uid://dmf0mw6yx21yd" path="res://Sprites/Electrodomésticos/Lavadora.png" id="16_dmite"]
+[ext_resource type="Texture2D" uid="uid://dgsnt7xyapk1d" path="res://Sprites/Electrodomésticos/LavadoraOff.png" id="17_485sr"]
+[ext_resource type="Texture2D" uid="uid://conpn02icom62" path="res://Sprites/Electrodomésticos/Cortacesped.png" id="18_c475u"]
+[ext_resource type="Texture2D" uid="uid://s2a70fmumfb3" path="res://Sprites/Electrodomésticos/CortacespedOff.png" id="19_rcnyu"]
+[ext_resource type="Texture2D" uid="uid://0mjywefgjtjk" path="res://Sprites/Electrodomésticos/Secador.png" id="20_k6his"]
+[ext_resource type="Texture2D" uid="uid://c4ub8x2ajkkdj" path="res://Sprites/Electrodomésticos/SecadorOff.png" id="21_3jw7q"]
+[ext_resource type="Texture2D" uid="uid://cspeavtpwtap5" path="res://Sprites/Electrodomésticos/BotónTV.png" id="22_v2xfl"]
+[ext_resource type="Texture2D" uid="uid://efrio4u8cs6u" path="res://Sprites/Electrodomésticos/BotónTVOff.png" id="23_gwjjf"]
+[ext_resource type="Texture2D" uid="uid://b5e88m3iri4u0" path="res://Sprites/Electrodomésticos/BotónVitro.png" id="24_cc7ow"]
+[ext_resource type="Texture2D" uid="uid://d2spnsg6xuf8k" path="res://Sprites/Electrodomésticos/BotónVitroOff.png" id="25_jmpns"]
+[ext_resource type="Texture2D" uid="uid://bdjq8jifwdwfg" path="res://Sprites/Electrodomésticos/BotónTostadora.png" id="26_khd40"]
+[ext_resource type="Texture2D" uid="uid://bn8dodhupojbg" path="res://Sprites/Electrodomésticos/BotónTostadoraOff.png" id="27_hhpxa"]
+[ext_resource type="Texture2D" uid="uid://bhsv5ams0uo5c" path="res://Sprites/Electrodomésticos/BotónExprimidor.png" id="28_8sjla"]
+[ext_resource type="FontFile" uid="uid://mmop8lqj3gns" path="res://King Kids.otf" id="29_0v384"]
+[ext_resource type="Script" path="res://Scenes/ScoreManager.cs" id="29_spvx8"]
+[ext_resource type="Texture2D" uid="uid://8e1m220v6v3v" path="res://Sprites/Electrodomésticos/BotónExprimidorOff.png" id="29_uetjn"]
+[ext_resource type="Texture2D" uid="uid://1a1lj78eefyt" path="res://Sprites/Panel.png" id="30_v77q6"]
+[ext_resource type="Script" path="res://Scenes/Date.cs" id="32_i04io"]
+[ext_resource type="Texture2D" uid="uid://ckp21fvxiksaw" path="res://Sprites/NPC2.png" id="33_pre2l"]
+[ext_resource type="AudioStream" uid="uid://ctq647gpc1wy8" path="res://FX/2.Lavadora.mp3" id="34_hh3x7"]
+[ext_resource type="Texture2D" uid="uid://dj5q6chnxpy6p" path="res://Sprites/NPC3.png" id="34_uegsu"]
+[ext_resource type="Script" path="res://Scenes/Room.cs" id="34_uh6co"]
+[ext_resource type="Texture2D" uid="uid://dn38g1yrliu2x" path="res://Sprites/NPC1Night.png" id="35_qxwod"]
+[ext_resource type="Texture2D" uid="uid://2nvctod5yimi" path="res://Sprites/light.png" id="35_yyb1e"]
+[ext_resource type="Texture2D" uid="uid://cdur1qqno8htr" path="res://Sprites/NPC2Night.png" id="36_0fnk6"]
+[ext_resource type="PackedScene" uid="uid://6t0hegum07ea" path="res://Scenes/Device.tscn" id="36_fh1cj"]
+[ext_resource type="Texture2D" uid="uid://dbl8c4emx7x6r" path="res://Sprites/NPC3Night.png" id="37_rii1a"]
+[ext_resource type="AudioStream" uid="uid://ruikg8v0bt0h" path="res://FX/7.Vitro.mp3" id="38_uaw5e"]
+[ext_resource type="AudioStream" uid="uid://blhqihytllv8r" path="res://FX/9.Exprimidor.mp3" id="39_quqh4"]
+[ext_resource type="AudioStream" uid="uid://j7tup4oya517" path="res://FX/8.2.Tostadora final.mp3" id="40_3p3qt"]
+[ext_resource type="AudioStream" uid="uid://6eaknar01ejs" path="res://FX/1.Lampara encendido.mp3" id="41_133sg"]
+[ext_resource type="Texture2D" uid="uid://dx465finiwxf" path="res://Sprites/Electrodomésticos/LavadoraIcono.png" id="42_ajd8f"]
+[ext_resource type="AudioStream" uid="uid://bu7i12fqtsxiy" path="res://FX/3.Secador.mp3" id="42_dylpr"]
+[ext_resource type="Texture2D" uid="uid://jdtifeblh542" path="res://Sprites/Electrodomésticos/BotónVitroIcono.png" id="43_q03jm"]
+[ext_resource type="AudioStream" uid="uid://bobabc2xy18qn" path="res://FX/4.Cortacesped.mp3" id="43_vre8u"]
+[ext_resource type="AudioStream" uid="uid://ypielt84r44h" path="res://FX/5.TV (ruido blanco).mp3" id="44_aw5cx"]
+[ext_resource type="AudioStream" uid="uid://cxfrk26vmey4y" path="res://FX/6.Equipo de m├║sica (radio).mp3" id="45_aa0qo"]
+[ext_resource type="Texture2D" uid="uid://ctd7reuksdgrb" path="res://Sprites/Electrodomésticos/BotónTostadoraIcono.png" id="45_bynme"]
+[ext_resource type="Texture2D" uid="uid://bmy2jt5cw5lod" path="res://Sprites/Electrodomésticos/BotónExprimidorIcono.png" id="47_ipr28"]
+[ext_resource type="AudioStream" uid="uid://cgl4pmj7gcmph" path="res://FX/10.Fantasma que aparece.mp3" id="48_upd0o"]
+[ext_resource type="AudioStream" uid="uid://cn8oyjejmgnbr" path="res://FX/Spirit_Light.mp3" id="49_76xp7"]
+[ext_resource type="Texture2D" uid="uid://b3ix16dje2tj6" path="res://Sprites/Electrodomésticos/LuzEntradaIcono.png" id="50_ny56d"]
+[ext_resource type="Texture2D" uid="uid://c6wkemgotsmj0" path="res://Sprites/Electrodomésticos/SecadorIcono.png" id="52_u7jyx"]
+[ext_resource type="Texture2D" uid="uid://h04ikfysmdls" path="res://Sprites/Electrodomésticos/CortacespedIcono.png" id="54_qamdx"]
+[ext_resource type="Texture2D" uid="uid://c5mpqnhm48ect" path="res://Sprites/Electrodomésticos/BotónTVIcono.png" id="56_cgylv"]
+[ext_resource type="Texture2D" uid="uid://cakx3kx66r6e" path="res://Sprites/Electrodomésticos/BotónAltavozIcono.png" id="58_3q7ft"]
+
+[sub_resource type="Gradient" id="Gradient_u6cks"]
+offsets = PackedFloat32Array(0.0202899, 0.736232, 0.892754, 1)
+colors = PackedColorArray(1, 0.788235, 0.670588, 1, 1, 0.788235, 0.670588, 1, 1, 0.788235, 0.670588, 1, 1, 0.788235, 0.670588, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1vmkd"]
+gradient = SubResource("Gradient_u6cks")
+
+[sub_resource type="LabelSettings" id="LabelSettings_svb4c"]
+font = ExtResource("29_0v384")
+font_size = 28
+font_color = Color(0.898039, 0.2, 0.262745, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.117647)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cajr4"]
+line_spacing = 6.0
+font = ExtResource("29_0v384")
+font_size = 28
+font_color = Color(0.454902, 0.756863, 0.396078, 1)
+outline_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.117647)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_47k2u"]
+font = ExtResource("29_0v384")
+font_size = 28
+font_color = Color(0.352941, 0.6, 0.839216, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.137255)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_11tn1"]
+font = ExtResource("29_0v384")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_sohhl"]
+font = ExtResource("29_0v384")
+font_size = 20
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.458824)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_b0ta0"]
+closed = false
+polygon = PackedVector2Array(-48, 48.5, -48, 63.5, -179, 62.5, -179, -75.5, -49, -74.5, -49, 8.5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_l0b5d"]
+closed = false
+polygon = PackedVector2Array(-175, -73.5, 169, -75.5, 169, 63.5, 143, 62.5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dkvr2"]
+closed = false
+polygon = PackedVector2Array(97, 62.5, -175, 62.5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8ge13"]
+closed = false
+polygon = PackedVector2Array(3, 60, 93, 60, 93, -9)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lpsqf"]
+closed = false
+polygon = PackedVector2Array(-15, -53.5, -15, -76.5, -178, -76.5, -179, 60.5, -151, 61.5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5k12j"]
+closed = false
+polygon = PackedVector2Array(74, -0.500015, 74, 83.5, -180, 83.5, -180, -74.5, 73, -74.5, 73, -44.5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_o4nmc"]
+closed = false
+polygon = PackedVector2Array(78, -40.5, 78, -74.5, -176, -73.5, -175, 171.5, 77, 172.5, 78, 7.49998)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uvea4"]
+closed = false
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_sgn3c"]
+closed = false
+polygon = PackedVector2Array(-177, 328.5, 209, 328.5, 208, -73.5)
+
+[sub_resource type="Gradient" id="Gradient_32hig"]
+colors = PackedColorArray(0.733333, 0, 0, 1, 0, 0.376471, 0.772549, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6b4cb"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ueq0d"]
+color_ramp = SubResource("Gradient_32hig")
+noise = SubResource("FastNoiseLite_6b4cb")
+
+[sub_resource type="Gradient" id="Gradient_2ibmt"]
+offsets = PackedFloat32Array(0.281125, 0.763052)
+colors = PackedColorArray(0.0431373, 0.113725, 0.282353, 1, 0.981701, 0.971593, 0.955824, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_sorjo"]
+gradient = SubResource("Gradient_2ibmt")
+
+[node name="Main" type="Node2D"]
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(-9.50004, 1)
+scale = Vector2(6.63672, 958)
+texture = SubResource("GradientTexture1D_1vmkd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Interface1" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 154.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = -360.0
+grow_vertical = 2
+
+[node name="LightsGrid" type="GridContainer" parent="CanvasLayer/Interface1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0390946
+anchor_top = 0.0944749
+anchor_right = 0.971193
+anchor_bottom = 0.405586
+offset_top = 71.9781
+offset_bottom = 71.9781
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="BotónEntrada" parent="CanvasLayer/Interface1/LightsGrid" node_paths=PackedStringArray("light") instance=ExtResource("2_dig6q")]
+layout_mode = 2
+texture_normal = ExtResource("3_og7ol")
+texture_pressed = ExtResource("4_704h3")
+stretch_mode = 4
+light = NodePath("../../../../Map/Floor1/Entrada/PointLight2D")
+
+[node name="BotónComedor" parent="CanvasLayer/Interface1/LightsGrid" node_paths=PackedStringArray("light") instance=ExtResource("2_dig6q")]
+layout_mode = 2
+texture_normal = ExtResource("5_h0sac")
+texture_pressed = ExtResource("6_5rodd")
+stretch_mode = 4
+light = NodePath("../../../../Map/Floor1/Comedor/PointLight2D")
+
+[node name="BotónCocina" parent="CanvasLayer/Interface1/LightsGrid" node_paths=PackedStringArray("light") instance=ExtResource("2_dig6q")]
+layout_mode = 2
+texture_normal = ExtResource("7_mr6vj")
+texture_pressed = ExtResource("8_p8xu0")
+stretch_mode = 4
+light = NodePath("../../../../Map/Floor1/Cocina/PointLight2D")
+
+[node name="BotónLavadero" parent="CanvasLayer/Interface1/LightsGrid" node_paths=PackedStringArray("light") instance=ExtResource("2_dig6q")]
+layout_mode = 2
+texture_normal = ExtResource("8_6alo8")
+texture_pressed = ExtResource("9_yvsc4")
+stretch_mode = 4
+light = NodePath("../../../../Map/Floor1/Lavadero/PointLight2D")
+
+[node name="BotónBaño" parent="CanvasLayer/Interface1/LightsGrid" node_paths=PackedStringArray("light") instance=ExtResource("2_dig6q")]
+layout_mode = 2
+stretch_mode = 4
+light = NodePath("../../../../Map/Floor1/Baño/PointLight2D")
+
+[node name="BotónJardín" parent="CanvasLayer/Interface1/LightsGrid" node_paths=PackedStringArray("light") instance=ExtResource("2_dig6q")]
+layout_mode = 2
+texture_normal = ExtResource("10_fx7sa")
+texture_pressed = ExtResource("11_ynvu1")
+stretch_mode = 4
+light = NodePath("../../../../Map/Floor1/Jardín/PointLight2D")
+
+[node name="DevicesGrid" type="GridContainer" parent="CanvasLayer/Interface1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0390946
+anchor_top = 0.50073
+anchor_right = 0.971193
+anchor_bottom = 0.928508
+offset_top = 17.4745
+offset_bottom = 17.4745
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="BotónLámpara" parent="CanvasLayer/Interface1/DevicesGrid" instance=ExtResource("13_4scxe")]
+layout_mode = 2
+texture_normal = ExtResource("14_wmdhy")
+texture_pressed = ExtResource("15_jj3sw")
+texture_disabled = ExtResource("15_jj3sw")
+stretch_mode = 4
+
+[node name="BotónLavadora" parent="CanvasLayer/Interface1/DevicesGrid" instance=ExtResource("13_4scxe")]
+layout_mode = 2
+texture_normal = ExtResource("16_dmite")
+texture_pressed = ExtResource("17_485sr")
+texture_disabled = ExtResource("17_485sr")
+stretch_mode = 4
+
+[node name="BotónCortacesped" parent="CanvasLayer/Interface1/DevicesGrid" instance=ExtResource("13_4scxe")]
+layout_mode = 2
+texture_normal = ExtResource("18_c475u")
+texture_pressed = ExtResource("19_rcnyu")
+texture_disabled = ExtResource("19_rcnyu")
+stretch_mode = 4
+
+[node name="BotónSecador" parent="CanvasLayer/Interface1/DevicesGrid" instance=ExtResource("13_4scxe")]
+layout_mode = 2
+texture_normal = ExtResource("20_k6his")
+texture_pressed = ExtResource("21_3jw7q")
+texture_disabled = ExtResource("21_3jw7q")
+stretch_mode = 4
+
+[node name="BotónTV" parent="CanvasLayer/Interface1/DevicesGrid" instance=ExtResource("13_4scxe")]
+layout_mode = 2
+texture_normal = ExtResource("22_v2xfl")
+texture_pressed = ExtResource("23_gwjjf")
+texture_disabled = ExtResource("23_gwjjf")
+stretch_mode = 4
+
+[node name="BotónAltavoz" parent="CanvasLayer/Interface1/DevicesGrid" instance=ExtResource("13_4scxe")]
+layout_mode = 2
+stretch_mode = 4
+
+[node name="BotónVitro" parent="CanvasLayer/Interface1/DevicesGrid" instance=ExtResource("13_4scxe")]
+layout_mode = 2
+texture_normal = ExtResource("24_cc7ow")
+texture_pressed = ExtResource("25_jmpns")
+texture_disabled = ExtResource("25_jmpns")
+stretch_mode = 4
+
+[node name="BotónTostador" parent="CanvasLayer/Interface1/DevicesGrid" instance=ExtResource("13_4scxe")]
+layout_mode = 2
+texture_normal = ExtResource("26_khd40")
+texture_pressed = ExtResource("27_hhpxa")
+texture_disabled = ExtResource("27_hhpxa")
+stretch_mode = 4
+
+[node name="BotónExprimidor" parent="CanvasLayer/Interface1/DevicesGrid" instance=ExtResource("13_4scxe")]
+layout_mode = 2
+texture_normal = ExtResource("28_8sjla")
+texture_pressed = ExtResource("29_uetjn")
+texture_disabled = ExtResource("29_uetjn")
+stretch_mode = 4
+
+[node name="ScoreManager" type="Control" parent="CanvasLayer/Interface1"]
+anchors_preset = 0
+offset_left = 19.0
+offset_top = 14.0
+offset_right = 471.0
+offset_bottom = 129.0
+script = ExtResource("29_spvx8")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Interface1/ScoreManager"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_v77q6")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/Interface1/ScoreManager"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 28.0
+offset_top = -15.5
+offset_right = 9.0
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Energía malgastada:
+"
+label_settings = SubResource("LabelSettings_svb4c")
+
+[node name="Label" type="Label" parent="CanvasLayer/Interface1/ScoreManager"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 28.0
+offset_top = 4.0
+offset_right = 9.0
+offset_bottom = 88.0
+grow_horizontal = 2
+text = "Energía aprovechada: 
+
+"
+label_settings = SubResource("LabelSettings_cajr4")
+
+[node name="Label3" type="Label" parent="CanvasLayer/Interface1/ScoreManager"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -35.0
+offset_right = 9.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Descontento: "
+label_settings = SubResource("LabelSettings_47k2u")
+
+[node name="Date" type="Control" parent="CanvasLayer/Interface1" node_paths=PackedStringArray("dayNightCycle")]
+layout_mode = 1
+anchor_left = -1.63374
+anchor_right = -0.598765
+anchor_bottom = 0.122222
+script = ExtResource("32_i04io")
+dayNightCycle = NodePath("../../../DayNightCycle")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Interface1/Date"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Día 1"
+label_settings = SubResource("LabelSettings_11tn1")
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Interface1/Date"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 66.0
+offset_top = 631.0
+offset_right = 3.0
+offset_bottom = 631.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Día 1"
+label_settings = SubResource("LabelSettings_11tn1")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="CanvasLayer/Interface1/Date"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 543.0
+offset_right = 199.002
+offset_bottom = 0.000160217
+grow_horizontal = 2
+grow_vertical = 2
+text = "Día 1"
+label_settings = SubResource("LabelSettings_11tn1")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Interface1"]
+layout_mode = 0
+offset_left = -692.0
+offset_top = 196.0
+offset_right = -610.0
+offset_bottom = 224.0
+text = "Lavadero"
+label_settings = SubResource("LabelSettings_sohhl")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Interface1"]
+layout_mode = 0
+offset_left = -442.0
+offset_top = 196.0
+offset_right = -360.0
+offset_bottom = 224.0
+text = "Cocina"
+label_settings = SubResource("LabelSettings_sohhl")
+
+[node name="Label3" type="Label" parent="CanvasLayer/Interface1"]
+layout_mode = 0
+offset_left = -176.0
+offset_top = 196.0
+offset_right = -94.0
+offset_bottom = 224.0
+text = "Entrada"
+label_settings = SubResource("LabelSettings_sohhl")
+
+[node name="Label4" type="Label" parent="CanvasLayer/Interface1"]
+layout_mode = 0
+offset_left = -566.0
+offset_top = 353.0
+offset_right = -484.0
+offset_bottom = 381.0
+text = "Baño"
+label_settings = SubResource("LabelSettings_sohhl")
+
+[node name="Label7" type="Label" parent="CanvasLayer/Interface1"]
+layout_mode = 0
+offset_left = -543.0
+offset_top = 345.0
+offset_right = -461.0
+offset_bottom = 373.0
+text = "~"
+label_settings = SubResource("LabelSettings_sohhl")
+
+[node name="Label5" type="Label" parent="CanvasLayer/Interface1"]
+layout_mode = 0
+offset_left = -718.0
+offset_top = 591.0
+offset_right = -636.0
+offset_bottom = 619.0
+text = "Jardín"
+label_settings = SubResource("LabelSettings_sohhl")
+
+[node name="Label6" type="Label" parent="CanvasLayer/Interface1"]
+layout_mode = 0
+offset_left = -442.0
+offset_top = 446.0
+offset_right = -360.0
+offset_bottom = 474.0
+text = "Comedor"
+label_settings = SubResource("LabelSettings_sohhl")
+
+[node name="Label8" type="Label" parent="CanvasLayer/Interface1"]
+layout_mode = 0
+offset_left = -225.0
+offset_top = 666.0
+offset_right = -88.0
+offset_bottom = 694.0
+text = "Pulsa R para salir
+"
+label_settings = SubResource("LabelSettings_sohhl")
+horizontal_alignment = 2
+
+[node name="Map" type="Control" parent="."]
+custom_minimum_size = Vector2(640, 720)
+layout_mode = 3
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 140.0
+offset_bottom = 360.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("1_frufw")
+
+[node name="NPC" parent="Map" instance=ExtResource("3_v70e1")]
+layout_mode = 2
+offset_left = -608.0
+offset_top = 162.0
+offset_right = -608.0
+offset_bottom = 162.0
+stretch_mode = 5
+moveMin = 7.0
+moveMax = 10.0
+actionMin = 5.0
+actionMax = 8.0
+
+[node name="NPC2" parent="Map" instance=ExtResource("3_v70e1")]
+layout_mode = 2
+offset_left = -608.0
+offset_top = 162.0
+offset_right = -456.0
+offset_bottom = 386.0
+texture = ExtResource("33_pre2l")
+stretch_mode = 5
+moveMin = 7.0
+moveMax = 10.0
+actionMin = 5.0
+actionMax = 8.0
+
+[node name="NPC3" parent="Map" instance=ExtResource("3_v70e1")]
+layout_mode = 2
+offset_left = -608.0
+offset_top = 162.0
+offset_right = -456.0
+offset_bottom = 386.0
+texture = ExtResource("34_uegsu")
+stretch_mode = 5
+moveMin = 7.0
+moveMax = 10.0
+actionMin = 5.0
+actionMax = 8.0
+
+[node name="NPC4" parent="Map" instance=ExtResource("3_v70e1")]
+layout_mode = 2
+offset_left = -608.0
+offset_top = 164.0
+offset_right = -384.0
+offset_bottom = 388.0
+texture = ExtResource("35_qxwod")
+stretch_mode = 5
+moveMin = 2.0
+moveMax = 4.0
+actionMin = 4.0
+actionMax = 5.0
+isNightMonster = true
+
+[node name="NPC5" parent="Map" instance=ExtResource("3_v70e1")]
+layout_mode = 2
+offset_left = -608.0
+offset_top = 164.0
+offset_right = -384.0
+offset_bottom = 388.0
+texture = ExtResource("36_0fnk6")
+stretch_mode = 5
+moveMin = 2.0
+moveMax = 4.0
+actionMin = 4.0
+actionMax = 5.0
+isNightMonster = true
+
+[node name="NPC6" parent="Map" instance=ExtResource("3_v70e1")]
+layout_mode = 2
+offset_left = -608.0
+offset_top = 164.0
+offset_right = -384.0
+offset_bottom = 388.0
+texture = ExtResource("37_rii1a")
+stretch_mode = 5
+moveMin = 2.0
+moveMax = 4.0
+actionMin = 4.0
+actionMax = 5.0
+isNightMonster = true
+
+[node name="Floor1" type="Control" parent="Map" groups=["Floor"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Map/Floor1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_kjb7m")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Lavadero" type="Control" parent="Map/Floor1" groups=["Room"]]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 66.0
+offset_top = 88.0
+offset_right = 193.0
+offset_bottom = 226.0
+script = ExtResource("34_uh6co")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Floor1/Lavadero"]
+position = Vector2(176, 75.5)
+occluder = SubResource("OccluderPolygon2D_b0ta0")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Map/Floor1/Lavadero"]
+position = Vector2(176, 75.5)
+
+[node name="PointLight2D" type="PointLight2D" parent="Map/Floor1/Lavadero"]
+position = Vector2(62, 67)
+enabled = false
+color = Color(1, 1, 0.466667, 1)
+blend_mode = 2
+shadow_enabled = true
+texture = ExtResource("35_yyb1e")
+texture_scale = 0.9
+
+[node name="Device" parent="Map/Floor1/Lavadero" node_paths=PackedStringArray("turnOffButton") instance=ExtResource("36_fh1cj")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 29.0
+offset_bottom = 0.0
+grow_vertical = 0
+pivot_offset = Vector2(15, 15)
+turnOffButton = NodePath("../../../../CanvasLayer/Interface1/DevicesGrid/BotónLavadora")
+
+[node name="AudioStreamPlayer" parent="Map/Floor1/Lavadero/Device" index="1"]
+stream = ExtResource("34_hh3x7")
+
+[node name="TextureRect" parent="Map/Floor1/Lavadero/Device" index="2"]
+offset_left = -0.5
+offset_right = 0.5
+pivot_offset = Vector2(15.5, 15)
+texture = ExtResource("42_ajd8f")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Map/Floor1/Lavadero"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 14.0
+offset_right = -6.0
+offset_bottom = 71.0
+grow_horizontal = 2
+
+[node name="Cocina" type="Control" parent="Map/Floor1" groups=["Room"]]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 193.0
+offset_top = 88.0
+offset_right = 539.0
+offset_bottom = 226.0
+script = ExtResource("34_uh6co")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Floor1/Cocina"]
+position = Vector2(176, 75.5)
+occluder = SubResource("OccluderPolygon2D_l0b5d")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Map/Floor1/Cocina"]
+position = Vector2(176, 75.5)
+occluder = SubResource("OccluderPolygon2D_dkvr2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Map/Floor1/Cocina"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 46.0
+offset_top = 52.0
+offset_right = -107.0
+offset_bottom = 124.0
+grow_horizontal = 2
+
+[node name="PointLight2D" type="PointLight2D" parent="Map/Floor1/Cocina"]
+position = Vector2(168, 70)
+enabled = false
+color = Color(1, 1, 0.466667, 1)
+blend_mode = 2
+shadow_enabled = true
+texture = ExtResource("35_yyb1e")
+texture_scale = 1.5
+
+[node name="Device" parent="Map/Floor1/Cocina" node_paths=PackedStringArray("turnOffButton") instance=ExtResource("36_fh1cj")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 111.0
+offset_top = -136.0
+offset_right = 140.0
+offset_bottom = -106.0
+grow_vertical = 0
+pivot_offset = Vector2(13, 15)
+turnOffButton = NodePath("../../../../CanvasLayer/Interface1/DevicesGrid/BotónVitro")
+
+[node name="AudioStreamPlayer" parent="Map/Floor1/Cocina/Device" index="1"]
+stream = ExtResource("38_uaw5e")
+
+[node name="TextureRect" parent="Map/Floor1/Cocina/Device" index="2"]
+offset_left = -4.99999
+offset_right = -2.40424
+pivot_offset = Vector2(16, 15)
+texture = ExtResource("43_q03jm")
+
+[node name="Device2" parent="Map/Floor1/Cocina" node_paths=PackedStringArray("turnOffButton") instance=ExtResource("36_fh1cj")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -124.0
+offset_right = 36.0
+offset_bottom = -94.0
+grow_vertical = 0
+pivot_offset = Vector2(15, 15)
+turnOffButton = NodePath("../../../../CanvasLayer/Interface1/DevicesGrid/BotónTostador")
+
+[node name="AudioStreamPlayer" parent="Map/Floor1/Cocina/Device2" index="1"]
+stream = ExtResource("39_quqh4")
+
+[node name="TextureRect" parent="Map/Floor1/Cocina/Device2" index="2"]
+offset_left = -4.0
+offset_top = 7.0
+offset_right = -1.31775
+offset_bottom = 7.0
+pivot_offset = Vector2(16, 15)
+texture = ExtResource("45_bynme")
+
+[node name="Device3" parent="Map/Floor1/Cocina" node_paths=PackedStringArray("turnOffButton") instance=ExtResource("36_fh1cj")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 224.0
+offset_top = -136.0
+offset_right = 253.0
+offset_bottom = -106.0
+grow_vertical = 0
+pivot_offset = Vector2(15, 15)
+turnOffButton = NodePath("../../../../CanvasLayer/Interface1/DevicesGrid/BotónExprimidor")
+
+[node name="AudioStreamPlayer" parent="Map/Floor1/Cocina/Device3" index="1"]
+stream = ExtResource("40_3p3qt")
+
+[node name="TextureRect" parent="Map/Floor1/Cocina/Device3" index="2"]
+offset_left = -4.27273
+offset_right = -2.72727
+pivot_offset = Vector2(15.2727, 15)
+texture = ExtResource("47_ipr28")
+
+[node name="Entrada" parent="Map/Floor1" instance=ExtResource("2_7ls4f")]
+offset_left = 540.0
+offset_top = 90.0
+offset_right = 701.0
+offset_bottom = 228.0
+
+[node name="LightOccluder2D" parent="Map/Floor1/Entrada" index="0"]
+position = Vector2(68, 76)
+occluder = SubResource("OccluderPolygon2D_8ge13")
+
+[node name="LightOccluder2D2" parent="Map/Floor1/Entrada" index="1"]
+occluder = SubResource("OccluderPolygon2D_lpsqf")
+
+[node name="HBoxContainer" parent="Map/Floor1/Entrada" index="2"]
+offset_left = 41.0
+offset_top = 25.0
+offset_right = -5.0
+offset_bottom = 88.0
+
+[node name="PointLight2D" parent="Map/Floor1/Entrada" index="3"]
+position = Vector2(77, 61)
+color = Color(1, 1, 0.466667, 1)
+energy = 1.0
+blend_mode = 2
+texture_scale = 0.71
+
+[node name="Device" parent="Map/Floor1/Entrada" index="4" node_paths=PackedStringArray("turnOffButton")]
+anchors_preset = 2
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_top = -126.0
+offset_right = 29.0
+offset_bottom = -96.0
+grow_horizontal = 1
+pivot_offset = Vector2(15, 15)
+turnOffButton = NodePath("../../../../CanvasLayer/Interface1/DevicesGrid/BotónLámpara")
+
+[node name="AudioStreamPlayer" parent="Map/Floor1/Entrada/Device" index="1"]
+stream = ExtResource("41_133sg")
+
+[node name="TextureRect" parent="Map/Floor1/Entrada/Device" index="2"]
+offset_top = 4.0
+offset_right = 3.10938
+offset_bottom = 4.0
+pivot_offset = Vector2(15.5, 15)
+texture = ExtResource("50_ny56d")
+
+[node name="Baño" parent="Map/Floor1" instance=ExtResource("2_7ls4f")]
+offset_left = 66.0
+offset_top = 226.0
+offset_right = 317.0
+offset_bottom = 384.0
+
+[node name="LightOccluder2D" parent="Map/Floor1/Baño" index="0"]
+position = Vector2(68, 76)
+occluder = null
+
+[node name="LightOccluder2D2" parent="Map/Floor1/Baño" index="1"]
+position = Vector2(177, 76)
+occluder = SubResource("OccluderPolygon2D_5k12j")
+
+[node name="HBoxContainer" parent="Map/Floor1/Baño" index="2"]
+offset_left = 68.0
+offset_top = 17.0
+offset_right = -31.0
+offset_bottom = 76.0
+
+[node name="PointLight2D" parent="Map/Floor1/Baño" index="3"]
+position = Vector2(117, 69)
+color = Color(1, 1, 0.466667, 1)
+energy = 1.0
+blend_mode = 2
+texture_scale = 1.76
+
+[node name="Device" parent="Map/Floor1/Baño" index="4" node_paths=PackedStringArray("turnOffButton")]
+anchors_preset = 2
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 7.0
+offset_top = -31.0
+offset_right = 36.0
+offset_bottom = -1.0
+grow_horizontal = 1
+pivot_offset = Vector2(15, 15)
+turnOffButton = NodePath("../../../../CanvasLayer/Interface1/DevicesGrid/BotónSecador")
+
+[node name="AudioStreamPlayer" parent="Map/Floor1/Baño/Device" index="1"]
+stream = ExtResource("42_dylpr")
+
+[node name="TextureRect" parent="Map/Floor1/Baño/Device" index="2"]
+offset_left = 6.0
+offset_right = 7.0
+pivot_offset = Vector2(15.5, 15)
+texture = ExtResource("52_u7jyx")
+
+[node name="Jardín" parent="Map/Floor1" instance=ExtResource("2_7ls4f")]
+offset_left = 63.0
+offset_top = 383.0
+offset_right = 317.0
+offset_bottom = 631.0
+
+[node name="LightOccluder2D" parent="Map/Floor1/Jardín" index="0"]
+position = Vector2(68, 76)
+occluder = null
+
+[node name="LightOccluder2D2" parent="Map/Floor1/Jardín" index="1"]
+occluder = SubResource("OccluderPolygon2D_o4nmc")
+
+[node name="HBoxContainer" parent="Map/Floor1/Jardín" index="2"]
+offset_left = 13.0
+offset_top = 14.0
+offset_right = -37.0
+offset_bottom = 76.0
+
+[node name="PointLight2D" parent="Map/Floor1/Jardín" index="3"]
+position = Vector2(130, 129)
+color = Color(1, 1, 0.466667, 1)
+energy = 1.0
+blend_mode = 2
+texture_scale = 1.5
+
+[node name="Device" parent="Map/Floor1/Jardín" index="4" node_paths=PackedStringArray("turnOffButton")]
+anchors_preset = 2
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 188.0
+offset_top = -55.0
+offset_right = 217.0
+offset_bottom = -25.0
+grow_horizontal = 1
+pivot_offset = Vector2(15, 15)
+turnOffButton = NodePath("../../../../CanvasLayer/Interface1/DevicesGrid/BotónCortacesped")
+
+[node name="AudioStreamPlayer" parent="Map/Floor1/Jardín/Device" index="1"]
+stream = ExtResource("43_vre8u")
+
+[node name="TextureRect" parent="Map/Floor1/Jardín/Device" index="2"]
+offset_left = -0.5
+offset_right = 0.5
+pivot_offset = Vector2(15.5, 15)
+texture = ExtResource("54_qamdx")
+
+[node name="Comedor" type="Control" parent="Map/Floor1" groups=["Room"]]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 317.0
+offset_top = 226.0
+offset_right = 702.0
+offset_bottom = 487.0
+script = ExtResource("34_uh6co")
+logNumber = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Floor1/Comedor"]
+position = Vector2(68, 76)
+occluder = SubResource("OccluderPolygon2D_uvea4")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Map/Floor1/Comedor"]
+position = Vector2(176, 75.5)
+occluder = SubResource("OccluderPolygon2D_sgn3c")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Map/Floor1/Comedor"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 13.8
+offset_top = 11.8
+offset_right = -211.2
+offset_bottom = 74.8
+grow_horizontal = 2
+
+[node name="PointLight2D" type="PointLight2D" parent="Map/Floor1/Comedor"]
+position = Vector2(214, 180)
+enabled = false
+color = Color(1, 1, 0.466667, 1)
+blend_mode = 2
+shadow_enabled = true
+texture = ExtResource("35_yyb1e")
+texture_scale = 2.55
+
+[node name="Device" parent="Map/Floor1/Comedor" node_paths=PackedStringArray("turnOffButton") instance=ExtResource("36_fh1cj")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 253.0
+offset_top = 104.0
+offset_right = 282.0
+offset_bottom = 134.0
+grow_vertical = 0
+pivot_offset = Vector2(15, 15)
+turnOffButton = NodePath("../../../../CanvasLayer/Interface1/DevicesGrid/BotónTV")
+
+[node name="AudioStreamPlayer" parent="Map/Floor1/Comedor/Device" index="1"]
+stream = ExtResource("44_aw5cx")
+
+[node name="TextureRect" parent="Map/Floor1/Comedor/Device" index="2"]
+offset_left = -0.5
+offset_right = 0.5
+pivot_offset = Vector2(15.5, 15)
+texture = ExtResource("56_cgylv")
+
+[node name="Device2" parent="Map/Floor1/Comedor" node_paths=PackedStringArray("turnOffButton") instance=ExtResource("36_fh1cj")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 176.0
+offset_top = -155.0
+offset_right = 205.0
+offset_bottom = -125.0
+grow_vertical = 0
+pivot_offset = Vector2(15, 15)
+turnOffButton = NodePath("../../../../CanvasLayer/Interface1/DevicesGrid/BotónAltavoz")
+
+[node name="AudioStreamPlayer" parent="Map/Floor1/Comedor/Device2" index="1"]
+stream = ExtResource("45_aa0qo")
+
+[node name="TextureRect" parent="Map/Floor1/Comedor/Device2" index="2"]
+offset_left = 19.0
+offset_right = 20.8491
+pivot_offset = Vector2(15, 15)
+texture = ExtResource("58_3q7ft")
+
+[node name="Floor2" type="Control" parent="Map" groups=["Floor"]]
+visible = false
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 720.0
+
+[node name="TextureRect" type="TextureRect" parent="Map/Floor2"]
+visible = false
+layout_mode = 2
+offset_right = 512.0
+offset_bottom = 512.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_ueq0d")
+
+[node name="DayNightCycle" type="CanvasModulate" parent="." node_paths=PackedStringArray("audio")]
+color = Color(0.419608, 0.419608, 0.419608, 1)
+script = ExtResource("6_862vi")
+INITIAL_HOUR = 8.0
+NUMBER_DAYS = 1.0
+DAY_NIGHT_MINUTES = 5.08
+gradient = SubResource("GradientTexture1D_sorjo")
+gameOverScene = "res://Scenes/GameOver.tscn"
+audio = NodePath("AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DayNightCycle"]
+stream = ExtResource("48_upd0o")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("49_76xp7")
+volume_db = -10.347
+autoplay = true
+
+[editable path="Map/Floor1/Lavadero/Device"]
+[editable path="Map/Floor1/Cocina/Device"]
+[editable path="Map/Floor1/Cocina/Device2"]
+[editable path="Map/Floor1/Cocina/Device3"]
+[editable path="Map/Floor1/Entrada"]
+[editable path="Map/Floor1/Entrada/Device"]
+[editable path="Map/Floor1/Baño"]
+[editable path="Map/Floor1/Baño/Device"]
+[editable path="Map/Floor1/Jardín"]
+[editable path="Map/Floor1/Jardín/Device"]
+[editable path="Map/Floor1/Comedor/Device"]
+[editable path="Map/Floor1/Comedor/Device2"]
